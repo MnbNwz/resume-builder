@@ -3,12 +3,12 @@ import { FaChevronUp } from "react-icons/fa";
 
 interface FormTemplateProps {
   title: string;
-  component: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const FormTemplate: React.FC<FormTemplateProps> = ({
   title,
-  component,
+  children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,7 +21,7 @@ export const FormTemplate: React.FC<FormTemplateProps> = ({
           className="flex justify-between items-center cursor-pointer"
           onClick={toggleAccordion}
         >
-          <p className="text-sm font-medium text-gray-700 ">{title}</p>
+          <p className="text-sm font-medium text-gray-700">{title}</p>
 
           <FaChevronUp
             className="text-gray-600"
@@ -34,7 +34,7 @@ export const FormTemplate: React.FC<FormTemplateProps> = ({
             isOpen ? "max-h-screen mt-4" : "max-h-0"
           }`}
         >
-          {isOpen && <div>{component}</div>}
+          {isOpen && <div>{children}</div>}
         </div>
       </div>
     </div>

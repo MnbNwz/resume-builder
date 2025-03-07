@@ -1,6 +1,5 @@
 import { z } from "zod";
 
-// Helper function to check and format dates
 const formatDate = (date: string) => {
   const parsedDate = new Date(date);
   if (isNaN(parsedDate.getTime())) return false; // Invalid date
@@ -21,9 +20,15 @@ export const workExperienceSchema = z.object({
     .refine((date) => formatDate(date), "Invalid End Date")
     .transform((date) => formatDate(date)),
   location: z.string().optional(),
+
   contributions: z
-    .array(z.string().min(1, "Contribution cannot be empty"))
+    .array(
+      z.object({
+        value: z.string().min(10, "Please write valid Contributions"),
+      })
+    )
     .optional(),
+  disabledEndDate: z.boolean().optional(),
 });
 
 export type WorkExperienceFormData = z.infer<typeof workExperienceSchema>;

@@ -4,9 +4,8 @@ import { FormTemplate } from "../../templates";
 
 export const ProfessionalSummary = () => {
   return (
-    <FormTemplate
-      title={APP_CONSTANTS.professionalSummary}
-      component={<ProfessionalSummaryForm />}
-    />
+    <FormTemplate title={APP_CONSTANTS.professionalSummary}>
+      <ProfessionalSummaryForm />
+    </FormTemplate>
   );
 };

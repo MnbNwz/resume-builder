@@ -4,9 +4,8 @@ import { FormTemplate } from "../../templates";
 
 export const WorkExperience = () => {
   return (
-    <FormTemplate
-      title={APP_CONSTANTS.workExperience}
-      component={<WorkExperienceForm />}
-    />
+    <FormTemplate title={APP_CONSTANTS.workExperience}>
+      <WorkExperienceForm />
+    </FormTemplate>
   );
 };

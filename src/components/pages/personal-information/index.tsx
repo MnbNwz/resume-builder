@@ -7,9 +7,8 @@ import { FormTemplate } from "../../templates";
 
 export const PersonalInformation = () => {
   return (
-    <FormTemplate
-      title={APP_CONSTANTS.personalInformation}
-      component={<ProfessionalSummaryForm />}
-    />
+    <FormTemplate title={APP_CONSTANTS.personalInformation}>
+      <ProfessionalSummaryForm />
+    </FormTemplate>
   );
 };

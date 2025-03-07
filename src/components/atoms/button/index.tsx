@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, FC, ReactNode } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  styleDate: string;
+  styleDate?: string;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -11,7 +11,7 @@ export const Button: FC<ButtonProps> = ({
   styleDate,
   ...props
 }) => (
-  <button type={type} className={`w-full ${styleDate}`} {...props}>
+  <button type={type} className={`p-0 leading-none ${styleDate}`} {...props}>
     {children}
   </button>
 );
