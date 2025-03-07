@@ -7,6 +7,7 @@ interface CheckboxWithLabelProps {
   label: string; // The label text for the checkbox
   className?: string; // Optional custom CSS class for styling
   register?: any; // Optional register function for form handling (from react-hook-form)
+  isChecked?: boolean; //is checkbox checked
 }
 
 // CheckboxWithLabel component combines a checkbox input with a label
@@ -15,13 +16,14 @@ export const CheckboxWithLabel: React.FC<CheckboxWithLabelProps> = ({
   label, // Checkbox label text
   className = "", // Custom CSS class, defaults to an empty string
   register, // Register function for form validation
+  isChecked = false,
 }) => {
   return (
     <div className="flex items-center space-x-2">
       {/* Checkbox component */}
       <Checkbox
         id={id}
-        className={` !bg-white" ${className}`}
+        className={`${isChecked ? "" : "appearance-none"} ${className}`}
         register={register}
       />
 

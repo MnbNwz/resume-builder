@@ -47,6 +47,7 @@ export const DateRange: FC<DateRangeProps> = ({
       <div className="flex items-center col-span-2">
         <CheckboxWithLabel
           // className={"!bg-white"}
+          isChecked={isEndDateDisabled}
           id="disabledEndDate" // ID for the checkbox
           label={APP_CONSTANTS.iCurrentlyWorkHere} // Label text for the checkbox
           register={register} // Register the checkbox field
