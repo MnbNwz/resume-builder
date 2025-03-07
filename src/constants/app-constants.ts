@@ -1,4 +1,4 @@
-const APP_CONSTANTS = {
+export const APP_CONSTANTS = {
   workExperience: "Work Experience",
   professionalSummary: "Professional Summary",
   personalInformation: "Personal Information",
@@ -7,5 +7,9 @@ const APP_CONSTANTS = {
   submit: "Submit",
   addWorkExperience: "Add  WorkExperience",
 };
-
-export default APP_CONSTANTS;
+export const Countries = [
+  { code: "US", name: "United States", flag: "https://flagcdn.com/us.svg" },
+  { code: "GB", name: "United Kingdom", flag: "https://flagcdn.com/gb.svg" },
+  { code: "IN", name: "India", flag: "https://flagcdn.com/in.svg" },
+  { code: "PK", name: "Pakistan", flag: "https://flagcdn.com/pk.svg" },
+];

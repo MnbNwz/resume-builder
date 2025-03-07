@@ -1,4 +1,4 @@
-import APP_CONSTANTS from "../../../constants/app-constants";
+import { APP_CONSTANTS } from "../../../constants/app-constants";
 import { WorkExperienceForm } from "../../organisms";
 import { FormTemplate } from "../../templates";
 
