@@ -1,9 +1,12 @@
+import APP_CONSTANTS from "../../../constants/app-constants";
 import { ProfessionalSummaryForm } from "../../organisms";
+import { FormTemplate } from "../../templates";
 
 export const ProfessionalSummary = () => {
   return (
-    <>
-      <ProfessionalSummaryForm />
-    </>
+    <FormTemplate
+      title={APP_CONSTANTS.professionalSummary}
+      component={<ProfessionalSummaryForm />}
+    />
   );
 };

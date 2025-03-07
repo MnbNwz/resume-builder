@@ -16,6 +16,8 @@ export const DateRange: FC<DateRangeProps> = ({ register, errors }) => (
       name="startDate"
       register={register}
       error={errors.startDate}
+      placeholder={"Start Date"}
+      dateRequired={true}
     />
     <InputField
       important={true}
@@ -23,6 +25,20 @@ export const DateRange: FC<DateRangeProps> = ({ register, errors }) => (
       name="endDate"
       register={register}
       error={errors.endDate}
+      placeholder={"End Date"}
+      dateRequired={true}
     />
+
+    <div className="flex items-center col-span-2">
+      <input
+        type="checkbox"
+        id="endDate"
+        className="mr-2 bg-white border-black" // White background and black border for checkbox
+        {...register("endDate")} // Registers checkbox in react-hook-form
+      />
+      <label htmlFor="endDate" className="text-black">
+        I currently work here
+      </label>
+    </div>
   </div>
 );
