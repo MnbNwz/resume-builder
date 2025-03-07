@@ -24,7 +24,8 @@ export const FormTemplate: React.FC<FormTemplateProps> = ({
           <p className="text-sm font-medium text-gray-700 ">{title}</p>
 
           <FaChevronUp
-            className={`transform rotate-${isOpen ? `180` : `0`} text-gray-600`}
+            className="text-gray-600"
+            style={{ transform: `rotate(${isOpen ? 180 : 0}deg)` }}
           />
         </div>
 

@@ -8,10 +8,9 @@ import {
 function App() {
   return (
     <div className="w-screen h-screen overflow-x-hidden space-y-4 p-4">
-      {/* <PersonalInformation /> */}
-
-      <WorkExperience />
       <ProfessionalSummary />
+      <PersonalInformation />
+      <WorkExperience />
     </div>
   );
 }
