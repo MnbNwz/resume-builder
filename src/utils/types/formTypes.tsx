@@ -24,7 +24,7 @@ export const workExperienceSchema = z.object({
   contributions: z
     .array(
       z.object({
-        value: z.string().min(10, "Please write valid Contributions"),
+        value: z.string(),
       })
     )
     .optional(),

@@ -85,7 +85,7 @@ export const WorkExperienceForm = () => {
 
           return (
             <div key={field.id}>
-              <div className="flex items-center gap-2 w-full">
+              <div className="flex items-center w-full">
                 <div className="flex-1">
                   <InputField
                     disabled={!isLast}

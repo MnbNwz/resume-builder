@@ -64,7 +64,9 @@ export const InputField: FC<InputFieldProps> = ({
             {...registerField}
             placeholder={placeholder}
             type={dateRequired ? "date" : type}
-            className="border border-gray-300 p-2 w-full text-black text-sm placeholder-gray-400 pr-10 rounded-md focus:border-black focus:outline-none focus:ring-1 focus:ring-gray-400 transition duration-150"
+            className={`border border-gray-300 p-2 w-full text-black text-sm placeholder-gray-400 pr-10 rounded-md focus:border-black focus:outline-none focus:ring-1 focus:ring-gray-400 transition duration-150 ${
+              disabled ? "!bg-gray-300 opacity-50 cursor-not-allowed" : ""
+            }`}
           />
         )}
         {dateRequired && (
