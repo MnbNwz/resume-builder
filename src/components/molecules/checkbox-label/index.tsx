@@ -19,7 +19,11 @@ export const CheckboxWithLabel: React.FC<CheckboxWithLabelProps> = ({
   return (
     <div className="flex items-center space-x-2">
       {/* Checkbox component */}
-      <Checkbox id={id} className={className} register={register} />
+      <Checkbox
+        id={id}
+        className={` !bg-white" ${className}`}
+        register={register}
+      />
 
       {/* Label associated with the checkbox */}
       <label htmlFor={id} className="text-sm text-black">

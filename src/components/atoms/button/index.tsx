@@ -11,7 +11,11 @@ export const Button: FC<ButtonProps> = ({
   styleDate,
   ...props
 }) => (
-  <button type={type} className={`p-0 leading-none ${styleDate}`} {...props}>
+  <button
+    type={type}
+    className={`p-0 leading-none  ${styleDate}`} // Added focus:outline-none and focus:ring-0
+    {...props}
+  >
     {children}
   </button>
 );

@@ -120,7 +120,7 @@ export const WorkExperienceForm = () => {
                   <Button
                     type="button"
                     onClick={() => remove(index)}
-                    className="!bg-transparent !text-black rounded-md h-10 w-10 flex items-center justify-center border border-gray-300"
+                    className="!bg-transparent !text-black  h-10 w-10 flex items-center justify-center"
                   >
                     <span className="flex items-center justify-center">
                       <FaRegTrashAlt size={18} className="text-black" />
