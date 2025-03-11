@@ -52,7 +52,8 @@ export const InputField: FC<InputFieldProps> = ({
   multiple = false, // Default to false for single-line input
   countryFlag = false, // Default to false for no country flag dropdown
 }) => {
-  const registerField = register(name as any); // Register the field for form validation
+  // @ts-expect-error It needs just some rechecking wit union with intersection
+  const registerField = register(name as any); // Expecting a known type error
 
   return (
     <div className="flex-1 relative">

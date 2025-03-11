@@ -18,7 +18,6 @@ export const ProfessionalSummaryForm = () => {
     register, // Register form fields
     handleSubmit, // Handles form submission
     formState: { errors }, // Form validation errors
-    reset, // Reset the form (if needed)
   } = useForm<ProfessionalSummaryFormData>({
     resolver: zodResolver(professionalSummarySchema), // Schema validation
     defaultValues,
